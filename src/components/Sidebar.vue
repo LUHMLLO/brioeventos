@@ -8,35 +8,20 @@
               </div>
           </div>
 
-          <div class="sidebar-section">
-              <router-link to="">
-                  <span>Home</span>
-              </router-link>
-              <router-link to="">
-                  <span>Agenda</span>
-              </router-link>
-              <router-link to="">
-                  <span>Expositores</span>
-              </router-link>
-              <router-link to="">
-                  <span>Descargables</span>
-              </router-link>
-              <router-link to="">
-                  <span>Encuesta</span>
-              </router-link>
-              <router-link to="">
-                  <span>Soporte</span>
-              </router-link>
-              <router-link to="">
-                  <span>Juegos</span>
+          <div class="sidebar-section padding-x-0">
+              <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in routes" :key="index">
+                  <small :class="fontClasses">{{route.name}}</small>
+                  <i :class="iconClasses"></i>
               </router-link>
           </div>
-          <div class="sidebar-section">
-              <router-link to="">
-                  <span>Settings</span>
+          <div class="sidebar-section padding-x-0">
+              <router-link to="" :class="routeClasses">
+                  <small :class="fontClasses">Settings</small>
+                  <i :class="iconClasses"></i>
               </router-link>
-              <router-link to="">
-                  <span>Logout</span>
+              <router-link to="" :class="routeClasses">
+                  <small :class="fontClasses">Log-out</small>
+                  <i :class="iconClasses"></i>
               </router-link>
           </div>
 
@@ -47,5 +32,30 @@
 <script>
 export default {
     name: 'Sidebar',
+    data(){
+        return{
+            routes:[
+                {name:'dashboard'},
+                {name:'agenda'},
+                {name:'exhibitors'},
+                {name:'downloads'},
+                {name:'survey'},
+                {name:'support'},
+                {name:'games'},
+            ],
+            routeClasses:'w-100 padding-x-15 padding-y-5 md:d-flex flex-center',
+            fontClasses: 'font-size-10 text-uppercase md:d-none',
+            iconClasses: 'd-none md:d-block uil uil-home'
+        }
+    },
+    methods:{
+        actualRouteClasses: function (route) {
+            let routerRoute = this.$route.path
+            let vforRoute = '/'+route.name
+            return {
+                'border-right-solid border-right-blue': routerRoute === vforRoute
+            }
+        },
+    },
 }
 </script>

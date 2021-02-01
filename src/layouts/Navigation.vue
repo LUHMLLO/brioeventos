@@ -1,13 +1,15 @@
 <template>
-    <div id="navigation" class="row vh-100 overflow-hidden">
+    <div id="navigation" class="d-flex flex-stretch vh-100 overflow-hidden">
 
-        <div class="col-1 sm:d-none h-100 padding-0">
+        <div class="vw-10 md:vw-5 sm:d-none h-100 padding-0 depth-1-grey-lighten-3">
             <Sidebar/>
         </div>
-        <div class="col-11 sm:col-12 h-100 padding-0 overflow-hidden overflow-scroll scrollbar-none">
-            <Navbar class="h-10"/>
+
+        <div class="h-100 overflow-scroll scrollbar-none" style="width: 100% !important;">
+            <Navbar class="h-10 depth-1-grey-lighten-3"/>
             <div id="view-content" class="bg-grey-lighten-5 w-100 vh-100 padding-25">
-                <div class="bg-white padding-25 h-100 w-100 margin-auto">
+                <div class="bg-white round-2 padding-25 h-100 w-100 margin-auto depth-1-grey-lighten-3">
+                    <h1 class="margin-bottom-25">{{$route.name}}</h1>
                     <slot/>
                 </div>
             </div>
