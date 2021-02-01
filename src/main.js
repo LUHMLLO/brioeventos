@@ -15,6 +15,10 @@ const apolloProvider = new VueApollo({
 import './components/export'
 import './layouts/export'
 
+import './store/exports/getters'
+import './store/exports/methods'
+
+
 Vue.config.productionTip = false
 new Vue({
   router,

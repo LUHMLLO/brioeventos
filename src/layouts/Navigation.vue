@@ -1,7 +1,7 @@
 <template>
     <div id="navigation" class="d-flex flex-stretch vh-100 overflow-hidden">
 
-        <div class="vw-10 md:vw-5 sm:d-none h-100 padding-0 depth-1-grey-lighten-3">
+        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'md:d-none':'']">
             <Sidebar/>
         </div>
 
@@ -20,6 +20,13 @@
 
 <script>
 export default {
-    name: 'Navigation'
-}
+    name: 'Navigation',
+    data(){
+        return{
+            generalClasses: ['depth-1-grey-lighten-3 bg-white z-index-12','vh-100']
+        };
+    },
+};
 </script>
+
+//@click="toggleSidebar"

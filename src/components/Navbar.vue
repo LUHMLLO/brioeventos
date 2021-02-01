@@ -1,14 +1,12 @@
 <template>
-  <div id="navbar" class="navbar sm:padding-left-0">
+  <div id="navbar" class="navbar">
             
-            <div class="bg-blue h-100 padding-x-10 text-align-center d-none sm:d-flex flex-center margin-right-15">
-                <i class="uil uil-bars font-size-25 color-baby-powder"></i>
-            </div>
 
       <div class="navbar-content">
           
           
           <div class="navbar-section">
+              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'md:d-block':'md:d-none' " @click="toggleSidebar"></i>
               <div class="input-wrapper">
                   <i class="uil uil-search color-grey-lighten-1"></i>
                   <input type="text" placeholder="search">
@@ -19,6 +17,9 @@
               
                 <router-link to="" class="margin-right-10">
                     <i class="uil uil-bell"></i>
+                </router-link>
+                <router-link to="" class="margin-right-10">
+                    <i class="uil uil-comments-alt"></i>
                 </router-link>
 
                 <div class="avatar avatar-lg">
