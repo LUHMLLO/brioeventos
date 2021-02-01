@@ -2,13 +2,14 @@
   <div id="sidebar" class="sidebar">
       <div class="sidebar-content">
 
-          <div class="sidebar-section padding-0 h-10">
-            <div class="bg-blue w-100 h-100 padding-x-10 text-align-center d-flex flex-center" @pointerdown="toggleSidebar">
-                <i class="uil uil-bars font-size-25 color-baby-powder"></i>
-            </div>
-          </div>
 
-          <div class="sidebar-section padding-x-0">
+          <div class="sidebar-section padding-0">
+              
+                <div class="bg-blue w-100 vh-10 overflow-hidden  margin-bottom-50 padding-10 text-align-center d-flex flex-center" @pointerdown="toggleSidebar">
+                    <i class="uil uil-bars font-size-25 color-baby-powder"></i>
+                </div>
+                
+
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
                   <i :class="[iconClasses+route.icon, !sidebarState ? 'md:margin-right-0':'']"></i>
                   <small :class="fontClasses">{{route.name}}</small>
