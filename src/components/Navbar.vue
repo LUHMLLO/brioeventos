@@ -7,7 +7,7 @@
           
           <div class="navbar-section">
               <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'sm:d-block':'sm:d-none' " @pointerdown="toggleSidebar"></i>
-              <div class="input-wrapper">
+              <div class="input-wrapper sm:d-none">
                   <i class="uil uil-search color-grey-lighten-1"></i>
                   <input type="text" placeholder="search">
               </div>
@@ -15,6 +15,9 @@
           
           <div class="navbar-section">
               
+                <router-link to="" class="margin-right-10 d-none sm:d-block">
+                    <i class="uil uil-search"></i>
+                </router-link>
                 <router-link to="" class="margin-right-10">
                     <i class="uil uil-bell"></i>
                 </router-link>
