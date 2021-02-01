@@ -15,14 +15,8 @@
           
           <div class="navbar-section">
               
-                <router-link to="" class="margin-right-10 d-none sm:d-block">
-                    <i class="uil uil-search"></i>
-                </router-link>
-                <router-link to="" class="margin-right-10">
-                    <i class="uil uil-bell"></i>
-                </router-link>
-                <router-link to="" class="margin-right-10">
-                    <i class="uil uil-comments-alt"></i>
+                <router-link :to="'/'+icon.name" :class="[ navRoutesClasses , icon.class ]" v-for="(icon,index) in navIcons" :key="index">
+                    <i :class="['uil uil-'+icon.icon,navIconsClasses]"></i>
                 </router-link>
 
                 <div class="avatar avatar-lg">
@@ -40,5 +34,28 @@
 <script>
 export default {
     name: 'Navbar',
+    data(){
+        return{
+            navIcons:[
+                {
+                    name: 'search', 
+                    icon: 'search', 
+                    class: 'd-none sm:d-block'
+                },
+                {
+                    name: 'notifications', 
+                    icon: 'bell',
+                    class: ''
+                },
+                {
+                    name: 'inbox', 
+                    icon: 'comments-alt',
+                    class: ''
+                }
+            ],
+            navRoutesClasses: 'margin-right-10',
+            navIconsClasses: 'sm:font-size-18'
+        }
+    }
 }
 </script>
