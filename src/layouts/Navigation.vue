@@ -1,7 +1,7 @@
 <template>
     <div id="navigation" class="d-flex flex-stretch vh-100 overflow-hidden">
 
-        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'sm:d-none':'sm:vw-35']">
+        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'sm:d-none':'sm:vw-45']">
             <Sidebar/>
         </div>
 
