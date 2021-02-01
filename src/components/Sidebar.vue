@@ -3,7 +3,7 @@
       <div class="sidebar-content">
 
           <div class="sidebar-section padding-0 h-10">
-            <div class="bg-blue w-100 h-100 padding-x-10 text-align-center d-flex flex-center" @click="toggleSidebar">
+            <div class="bg-blue w-100 h-100 padding-x-10 text-align-center d-flex flex-center" @pointerdown="toggleSidebar">
                 <i class="uil uil-bars font-size-25 color-baby-powder"></i>
             </div>
           </div>

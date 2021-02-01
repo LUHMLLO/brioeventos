@@ -6,7 +6,7 @@
           
           
           <div class="navbar-section">
-              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'md:d-block':'md:d-none' " @click="toggleSidebar"></i>
+              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'md:d-block':'md:d-none' " @pointerdown="toggleSidebar"></i>
               <div class="input-wrapper">
                   <i class="uil uil-search color-grey-lighten-1"></i>
                   <input type="text" placeholder="search">

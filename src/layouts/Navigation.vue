@@ -29,4 +29,4 @@ export default {
 };
 </script>
 
-//@click="toggleSidebar"
+//@pointerdown="toggleSidebar"
