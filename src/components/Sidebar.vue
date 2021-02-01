@@ -44,7 +44,7 @@ export default {
                 {name:'signout',icon:'signout'},
             ],
             routeClasses:'w-100 padding-x-15 padding-y-5 md:d-flex align-items-center',
-            fontClasses: 'font-size-10 text-uppercase tooltip margin-y-auto margin-x-0',
+            fontClasses: 'font-size-10 sm:font-size-20 text-uppercase tooltip margin-y-auto margin-x-0',
             iconClasses: 'tooltip-toggle d-none md:d-inline-block margin-right-10 uil uil-'
         }
     },
