@@ -5,7 +5,7 @@
 
         <Slider class="offset-right-25 offset-left-25">
 
-            <div class="col-5 sm:col-7 livechildren" v-for="(stream,index) in liveStreams" :key="index">
+            <div class="col-5 md:col-7 sm:col-9 xs:col-11 livechildren" v-for="(stream,index) in liveStreams" :key="index">
                 <router-link to="">   
                 <div class="round-2 overflow-hidden depth-1-grey-lighten-3 depth-2-grey-lighten-1-hover cursor-pointer height-200 md:height-300">                   
                     <div class="image-wrapper image-background round-2 overflow-hidden">

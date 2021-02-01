@@ -1,12 +1,12 @@
 <template>
-  <div id="navbar" class="navbar">
+  <div id="navbar" class="navbar padding-x-25">
             
 
       <div class="navbar-content">
           
           
           <div class="navbar-section">
-              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'md:d-block':'md:d-none' " @pointerdown="toggleSidebar"></i>
+              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'sm:d-block':'sm:d-none' " @pointerdown="toggleSidebar"></i>
               <div class="input-wrapper">
                   <i class="uil uil-search color-grey-lighten-1"></i>
                   <input type="text" placeholder="search">

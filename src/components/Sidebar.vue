@@ -10,13 +10,13 @@
 
           <div class="sidebar-section padding-x-0">
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
-                  <i :class="iconClasses+route.icon"></i>
+                  <i :class="[iconClasses+route.icon, !sidebarState ? 'md:margin-right-0':'']"></i>
                   <small :class="fontClasses">{{route.name}}</small>
               </router-link>
           </div>
           <div class="sidebar-section padding-x-0">
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in app_routes" :key="index">
-                  <i :class="iconClasses+route.icon"></i>
+                  <i :class="[iconClasses+route.icon, !sidebarState ? 'md:margin-right-0':'']"></i>
                   <small :class="fontClasses">{{route.name}}</small>
               </router-link>
           </div>
@@ -43,9 +43,9 @@ export default {
                 {name:'settings',icon:'setting'},
                 {name:'signout',icon:'signout'},
             ],
-            routeClasses:'w-100 padding-x-15 padding-y-5 md:d-flex flex-center md:tooltip-wrapper',
-            fontClasses: 'font-size-10 text-uppercase tooltip',
-            iconClasses: 'tooltip-toggle d-none md:d-inline-block margin-right-10 md:margin-right-0 uil uil-'
+            routeClasses:'w-100 padding-x-15 padding-y-5 md:d-flex align-items-center',
+            fontClasses: 'font-size-10 text-uppercase tooltip margin-y-auto margin-x-0',
+            iconClasses: 'tooltip-toggle d-none md:d-inline-block margin-right-10 uil uil-'
         }
     },
     methods:{
@@ -53,7 +53,8 @@ export default {
             let routerRoute = this.$route.path
             let vforRoute = '/'+route.name
             return {
-                'border-right-solid border-right-blue': routerRoute === vforRoute
+                'border-right-solid border-right-blue': routerRoute === vforRoute,
+                ' md:tooltip-wrapper': !this.sidebarState
             }
         },
     },

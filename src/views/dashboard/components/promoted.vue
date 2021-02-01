@@ -6,7 +6,7 @@
         
         <div class="row row-adjust">
 
-            <div class="col-3 md:col-6 md:margin-bottom-15" v-for="(card,index) in cards" :key="index">
+            <div class="col-3 md:col-6 sm:col-6 xs:col-12 md:margin-bottom-15" v-for="(card,index) in cards" :key="index">
                 <router-link to="">
                     <Card/>
                 </router-link>

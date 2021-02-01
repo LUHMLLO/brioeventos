@@ -1,11 +1,11 @@
 <template>
     <div id="navigation" class="d-flex flex-stretch vh-100 overflow-hidden">
 
-        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'md:d-none':'']">
+        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'sm:d-none':'sm:vw-35']">
             <Sidebar/>
         </div>
 
-        <div class="h-100 overflow-scroll scrollbar-none" style="width: 100% !important;">
+        <div class="h-100 overflow-scroll scrollbar-none sm:w-100" style="width: 100% !important;">
             <Navbar class="h-10 depth-1-grey-lighten-3"/>
             <div id="view-content" class="bg-grey-lighten-5 w-100 min-vh-100 padding-25">
                 <div class="bg-white round-2 padding-25 h-100 w-100 margin-auto depth-1-grey-lighten-3">
@@ -28,5 +28,3 @@ export default {
     },
 };
 </script>
-
-//@pointerdown="toggleSidebar"
