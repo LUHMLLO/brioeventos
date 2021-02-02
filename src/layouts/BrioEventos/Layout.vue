@@ -1,9 +1,6 @@
 <template>
-    <div id="navigation" class="d-flex flex-stretch vh-100 overflow-hidden">
+    <div id="BrioEventos" class="d-flex flex-stretch vh-100 overflow-hidden">
 
-        <div class="padding-0" :class="[generalClasses, !this.sidebarState ? 'sm:d-none':'sm:vw-45']">
-            <Sidebar/>
-        </div>
 
         <div class="h-100 overflow-scroll scrollbar-none sm:w-100" style="width: 100% !important;">
             <Navbar class="h-10 depth-1-grey-lighten-3"/>
@@ -20,7 +17,10 @@
 
 <script>
 export default {
-    name: 'Navigation',
+    name: 'Layout_BrioEventos',
+    components:{
+        Navbar:()=>import('./components/Navbar'),
+    },
     data(){
         return{
             generalClasses: ['depth-1-grey-lighten-3 bg-white z-index-12','vh-100']

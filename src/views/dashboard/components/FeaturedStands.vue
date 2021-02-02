@@ -19,7 +19,10 @@
 
 <script>
 export default {
-    name: 'promoted',
+    name: 'FeaturedStands',
+    components:{
+        Card:()=>import('../widgets/Card'),
+    },
     data(){
         return{
 

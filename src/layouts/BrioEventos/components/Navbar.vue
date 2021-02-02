@@ -21,7 +21,7 @@
 
                 <div class="avatar avatar-lg">
                     <div class="image-wrapper round-12">
-                        <img src="@/assets/avatar.png">
+                        <img src="../assets/avatar.png">
                     </div>
                 </div>
 

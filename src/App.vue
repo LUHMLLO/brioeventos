@@ -1,7 +1,18 @@
 <template>
   <div id="app">    
-    <Navigation>
+    <component :is="this.layout">
       <router-view/>
-    </Navigation>
+    </component>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'app',
+  data(){
+    return{
+      layout: 'Layout_BrioEventos'
+    }
+  },
+}
+</script>

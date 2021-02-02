@@ -2,7 +2,7 @@
   <div id="Dashboard">
 
     <RecentLiveStreams/>
-    <promoted/>
+    <FeaturedStands/>
 
 
   </div>
@@ -13,7 +13,7 @@ export default {
   name: 'Dashboard',
   components: {
     RecentLiveStreams: ()=> import('./components/RecentLiveStreams'),
-    promoted: ()=> import('./components/promoted')
+    FeaturedStands: ()=> import('./components/FeaturedStands')
   }
 }
 </script>
