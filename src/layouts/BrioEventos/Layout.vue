@@ -7,8 +7,7 @@
 
         
         <div id="content" class="d-flex depth-6">
-
-            <div class=" padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none" :class="this.sidebarState ? 'col-6 z-index-12 depth-6':'sm:d-none col-2 md:col-3'">
+            <div class=" padding-0 bg-grey-lighten-5 overflow-hidden vh-100 overflow-scroll scrollbar-none" :class="this.sidebarState ? 'col-8 z-index-12 depth-6':'sm:d-none col-2 md:col-3'">
                 <Sidebar/>
             </div>
             <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100  scrollbar-none depth-1-grey-lighten-1" :class="this.sidebarState ? '':'overflow-scroll'">

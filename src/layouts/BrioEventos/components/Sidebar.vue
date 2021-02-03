@@ -1,12 +1,12 @@
 <template>
-  <div class="sidebar" :class="[ 'bg-grey-lighten-5' ]">
+  <div class="sidebar">
       <div class="sidebar-content">
 
           <div class="sidebar-section">
               <div class="image-wrapper height-50">
                   <img src="../assets/logo-square.jpg" alt="">
               </div>
-              <SidebarSearch class="margin-y-20"/>
+              <SidebarSearch class="margin-y-20 sm:margin-y-50"/>
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
                   <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
                   <span :class="fontClasses">{{route.name}}</span>
@@ -58,8 +58,8 @@ export default {
                 {name:'support',icon:'question-circle'},
             ],
             routeClasses:'w-100 padding-y-5 d-flex align-content-center  round-2',
-            fontClasses: 'font-size-8 font-bolder text-uppercase',
-            iconClasses: 'font-size-12 d-inline-block margin-right-10'
+            fontClasses: 'font-size-8 sm:font-size-20 font-bolder text-uppercase',
+            iconClasses: 'font-size-12 sm:font-size-18 d-inline-block margin-right-10'
         }
     },
     methods:{
