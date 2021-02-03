@@ -2,7 +2,6 @@
   <div id="Dashboard">
 
     <LiveRightNow/>
-    <FeaturedStands/>
 
 
   </div>
@@ -13,7 +12,7 @@ export default {
   name: 'Dashboard',
   components: {
     LiveRightNow: ()=> import('./components/LiveRightNow'),
-    FeaturedStands: ()=> import('./components/FeaturedStands')
+    //FeaturedStands: ()=> import('./components/FeaturedStands')
   },
   data(){
     return{

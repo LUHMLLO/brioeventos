@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-content-center  w-100" :class="'bg-blue-darken-4 color-baby-powder padding-15 depth-1-blue-darken-4'">
+  <div class="d-flex align-content-center  w-100" :class="'bg-blue-darken-4 color-baby-powder padding-15'">
     <div class="avatar d-inline-block margin-right-5">
       <div class="image-wrapper round-12">
         <img src="../assets/avatar.png" />
