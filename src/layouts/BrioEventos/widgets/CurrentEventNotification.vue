@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-15 w-100">
+  <div class="padding-15 w-100 sm:padding-bottom-25">
     <router-link to=""
       class="padding-15 bg-blue-darken-4 color-baby-powder round-1 d-flex flex-column cursor-pointer depth-1-blue-darken-4"
     >
