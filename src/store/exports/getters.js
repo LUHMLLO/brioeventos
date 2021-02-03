@@ -6,6 +6,7 @@ Vue.mixin({
     computed: {      
     ...mapGetters({
       sidebarState: 'sidebar_Getter',
+      theaterMode: 'theaterMode_Getter',
     }),    
   },
 

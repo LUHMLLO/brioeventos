@@ -1,6 +1,6 @@
 <template>
      
-    <div class="round-2 overflow-hidden depth-1-grey-lighten-3 depth-1-grey-lighten-1-hover cursor-pointer">
+    <div class="round-1 overflow-hidden depth-1-grey-lighten-3 depth-1-grey-lighten-1-hover cursor-pointer">
         
         <div class="image-wrapper height-200">
             <img src="https://images.unsplash.com/photo-1611176346948-a19de4f62140">

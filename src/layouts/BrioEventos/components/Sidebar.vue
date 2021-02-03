@@ -57,7 +57,7 @@ export default {
                 {name:'survey',icon:'clipboard-alt'},
                 {name:'support',icon:'question-circle'},
             ],
-            routeClasses:'w-100 padding-y-5 d-flex align-content-center  round-2',
+            routeClasses:'w-100 padding-y-5 d-flex align-content-center  round-1',
             fontClasses: 'font-size-8 sm:font-size-20 font-bolder text-uppercase',
             iconClasses: 'font-size-12 sm:font-size-18 d-inline-block margin-right-10'
         }

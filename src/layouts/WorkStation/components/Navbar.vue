@@ -20,7 +20,7 @@
                 </router-link>
 
                 <div class="avatar avatar-lg">
-                    <div class="image-wrapper round-12">
+                    <div class="image-wrapper round-2">
                         <img src="../assets/avatar.png">
                     </div>
                 </div>

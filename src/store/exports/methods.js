@@ -9,7 +9,13 @@ Vue.mixin({
       } else {
         this.$store.dispatch("sidebar_action");
       }
-      console.log(this.sidebarState)
+    },
+    toggleTheaterMode() {
+      if (!this.theaterMode) {
+        this.$store.dispatch("theaterMode_action");
+      } else {
+        this.$store.dispatch("theaterMode_action");
+      }
     },
 
 

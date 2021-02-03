@@ -7,8 +7,8 @@
 
             <div class="col-5 md:col-7 sm:col-9 xs:col-11 livechildren" v-for="(stream,index) in liveStreams" :key="index">
                 <router-link to="">   
-                <div class="round-2 overflow-hidden depth-1-grey-lighten-3 depth-2-grey-lighten-1-hover cursor-pointer height-200 md:height-300">                   
-                    <div class="image-wrapper image-background round-2 overflow-hidden">
+                <div class="round-1 overflow-hidden depth-1-grey-lighten-3 depth-2-grey-lighten-1-hover cursor-pointer height-200 md:height-300">                   
+                    <div class="image-wrapper image-background round-1 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a">
                     </div>
                     <div class="w-100 padding-x-15 padding-y-10 p-absolute bottom left bg-black-fade-8 color-baby-powder d-flex flex-between">
