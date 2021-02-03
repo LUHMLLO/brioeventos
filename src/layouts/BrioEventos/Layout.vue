@@ -13,7 +13,7 @@
             <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100  scrollbar-none depth-1-grey-lighten-1" :class="this.sidebarState ? '':'overflow-scroll'">
                 <div class="p-fixed top left bg-black-fade-8 vw-100 vh-100 padding-100 z-index-12 cursor-pointer" @pointerdown="toggleSidebar" v-if="this.sidebarState"/> 
                 <div class="cover depth-1" :class="this.theaterMode ? '':'margin-bottom-15'">
-                    <div class="image-wrapper height-200">
+                    <div class="image-wrapper height-250">
                         <img src="./assets/logo-square.jpg" alt="">
                     </div>
                     <Navbar class="d-none sm:d-block"/>

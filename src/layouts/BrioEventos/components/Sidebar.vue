@@ -2,18 +2,18 @@
   <div class="sidebar">
       <div class="sidebar-content">
 
-          <div class="sidebar-section">
-              <div class="image-wrapper height-50">
+          <div class="sidebar-section padding-0">
+              <div class="image-wrapper height-100">
                   <img src="../assets/logo-square.jpg" alt="">
               </div>
-              <SidebarSearch class="margin-y-20 sm:margin-y-50"/>
+          </div>
+
+          <div class="sidebar-section">
+              <SidebarSearch class="margin-top-10 margin-bottom-20 sm:margin-bottom-50"/>
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
                   <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
                   <span :class="fontClasses">{{route.name}}</span>
               </router-link>
-          </div>
-
-          <div class="sidebar-section">
               <div class="w-100 d-block">
                   <label class="font-bolder font-size-8 color-grey-darken-1 text-uppercase">Extra</label>
               </div>
@@ -48,14 +48,14 @@ export default {
             site_routes:[
                 {name:'dashboard',icon:'create-dashboard'},
                 {name:'agenda',icon:'schedule'},
-                {name:'exhibitors',icon:'podium'},
-                {name:'games',icon:'streering'},
+                {name:'moderadores',icon:'podium'},
+                {name:'juegos',icon:'streering'},
             ],
             app_routes:[
-                {name:'downloads',icon:'download-alt'},
-                {name:'favorites',icon:'heart'},
-                {name:'survey',icon:'clipboard-alt'},
-                {name:'support',icon:'question-circle'},
+                {name:'descargas',icon:'download-alt'},
+                {name:'favoritos',icon:'heart'},
+                {name:'encuestas',icon:'clipboard-alt'},
+                {name:'soporte',icon:'question-circle'},
             ],
             routeClasses:'w-100 padding-y-5 d-flex align-content-center  round-1',
             fontClasses: 'font-size-8 sm:font-size-20 font-bolder text-uppercase',
