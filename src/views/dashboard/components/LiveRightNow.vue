@@ -43,9 +43,9 @@ export default {
     return {
       actionCards: [
         {
-          name: "Brio Eventos",
-          bg: "https://images.unsplash.com/photo-1560523159-6b681a1e1852",
           featured: true,
+          name: "Printo",
+          bg: require("@/assets/printo.png"),
           route: 'https://exhibicion-expocibao.webflow.io/3g-stand-s/brio-eventos',
         },
         {

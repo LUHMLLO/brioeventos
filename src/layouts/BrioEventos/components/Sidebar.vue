@@ -10,14 +10,14 @@
 
           <div class="sidebar-section">
               <SidebarSearch class="margin-top-10 margin-bottom-20 sm:margin-bottom-50"/>
-              <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
+              <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index -100">
                   <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
                   <span :class="fontClasses">{{route.name}}</span>
               </router-link>
               <div class="w-100 d-block">
                   <label class="font-bolder font-size-8 color-grey-darken-1 text-uppercase">Extra</label>
               </div>
-              <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in app_routes" :key="index">
+              <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in app_routes" :key="index +100">
                   <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
                   <span :class="fontClasses">{{route.name}}</span>
               </router-link>
