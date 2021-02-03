@@ -9,6 +9,7 @@ Vue.mixin({
       } else {
         this.$store.dispatch("sidebar_action");
       }
+      console.log(this.sidebarState)
     },
 
 

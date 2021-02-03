@@ -8,20 +8,13 @@
         
         <div id="content" class="d-flex depth-6">
 
-            <div class="col-2 md:col-3 sm:d-none padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none">
+            <div class=" padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none" :class="!this.sidebarState ? 'col-6 z-index-12 depth-6':'sm:d-none col-2 md:col-3'">
                 <Sidebar/>
             </div>
-            <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100 overflow-scroll scrollbar-none depth-1-grey-lighten-1">               
-
-                <div id="header" class="height-400">
-
-                        <div class="image-wrapper image-background">
-                            <img src="./assets/logo-square.jpg" alt="">
-                            <div class="w-100 h-100" />
-                        </div>
-                </div>
-
-                <div class="padding-x-25">                
+            <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100 overflow-scroll scrollbar-none depth-1-grey-lighten-1">
+                <div class="p-absolute top left bg-black-fade-8 w-100 h-100 padding-100 z-index-12 cursor-pointer" @pointerdown="toggleSidebar" v-if="!this.sidebarState"/> 
+                <Navbar class="d-none sm:d-flex"/>
+                <div class="padding-x-25">
                     <slot/>
                 </div>
             </div>
@@ -38,6 +31,7 @@ export default {
     name: 'Layout_BrioEventos',
     components:{
         Sidebar:()=>import('./components/Sidebar'),
+        Navbar:()=>import('./components/Navbar'),
     },
     data(){
         return{

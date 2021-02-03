@@ -6,7 +6,7 @@
     </div>
     <div class="padding-x-10 padding-y-5 bg-white round-2 d-inline-flex">
       <span class="font-size-8 font-bolder" v-if="this.featured">Partner Spotlight</span>
-      <i class="font-size-10 uil uil-comments-alt" v-if="!this.featured"></i>
+      <i :class="'font-size-10 uil uil-'+icon" v-if="!this.featured"></i>
     </div>
     <h6 class="margin-y-15 color-baby-powder">{{name}}</h6>
     <div class="padding-x-10 padding-y-0 bg-white round-2 d-inline-flex">
@@ -23,6 +23,9 @@ export default {
       type: String
     },
     bg:{
+      type: String
+    },
+    icon:{
       type: String
     },
     featured:{

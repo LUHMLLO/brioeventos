@@ -1,16 +1,12 @@
 <template>
-  <div class="navbar padding-x-25">
+  <div class="navbar">
             
 
       <div class="navbar-content">
           
           
           <div class="navbar-section">
-              <i class="uil uil-bars margin-right-25 font-size-20 d-none" :class="!this.sidebarState ? 'sm:d-block':'sm:d-none' " @pointerdown="toggleSidebar"></i>
-              <div class="input-wrapper sm:d-none">
-                  <i class="uil uil-search color-grey-lighten-1"></i>
-                  <input type="text" placeholder="search">
-              </div>
+              <i class="uil uil-bars margin-right-25 font-size-20" @pointerdown="toggleSidebar"></i>
           </div>
           
           <div class="navbar-section">
@@ -18,12 +14,6 @@
                 <router-link :to="'/'+icon.name" :class="[ navRoutesClasses , icon.class ]" v-for="(icon,index) in navIcons" :key="index">
                     <i :class="['uil uil-'+icon.icon,navIconsClasses]"></i>
                 </router-link>
-
-                <div class="avatar avatar-lg">
-                    <div class="image-wrapper round-12">
-                        <img src="../assets/avatar.png">
-                    </div>
-                </div>
 
           </div>
 
@@ -40,7 +30,7 @@ export default {
                 {
                     name: 'search', 
                     icon: 'search', 
-                    class: 'd-none sm:d-block'
+                    class: ''
                 },
                 {
                     name: 'notifications', 
