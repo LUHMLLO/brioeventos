@@ -1,5 +1,5 @@
 <template>
-    <section class="margin-bottom-50">
+    <section class="section">
 
         <h6 class="margin-bottom-15">Featured</h6>
 

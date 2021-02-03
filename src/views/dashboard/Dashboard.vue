@@ -1,7 +1,7 @@
 <template>
   <div id="Dashboard">
 
-    <RecentLiveStreams/>
+    <LiveRightNow/>
     <FeaturedStands/>
 
 
@@ -12,8 +12,13 @@
 export default {
   name: 'Dashboard',
   components: {
-    RecentLiveStreams: ()=> import('./components/RecentLiveStreams'),
+    LiveRightNow: ()=> import('./components/LiveRightNow'),
     FeaturedStands: ()=> import('./components/FeaturedStands')
+  },
+  data(){
+    return{
+
+    }
   }
 }
 </script>

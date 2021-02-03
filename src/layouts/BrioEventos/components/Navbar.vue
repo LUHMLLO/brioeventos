@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar" class="navbar padding-x-25">
+  <div class="navbar padding-x-25">
             
 
       <div class="navbar-content">

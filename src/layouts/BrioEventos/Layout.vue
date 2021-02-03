@@ -1,17 +1,35 @@
 <template>
-    <div id="BrioEventos" class="d-flex flex-stretch vh-100 overflow-hidden">
+    <div id="BrioEventos" class="bg-grey-lighten-5  padding-x-80 md:padding-x-40 sm:padding-x-0 vh-100 overflow-hidden">
 
+        <div class="image-wrapper image-background image-blur-2">
+            <img src="./assets/background.jpg" alt="">
+        </div>
 
-        <div class="h-100 overflow-scroll scrollbar-none sm:w-100" style="width: 100% !important;">
-            <Navbar class="h-10 depth-1-grey-lighten-3"/>
-            <div id="view-content" class="bg-grey-lighten-5 w-100 min-vh-100 padding-25">
-                <div class="bg-white round-2 padding-25 h-100 w-100 margin-auto depth-1-grey-lighten-3">
-                    <h1 class="margin-bottom-25">{{$route.name}}</h1>
+        
+        <div id="content" class="d-flex depth-6">
+
+            <div class="col-2 md:col-3 sm:d-none padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none">
+                <Sidebar/>
+            </div>
+            <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100 overflow-scroll scrollbar-none depth-1-grey-lighten-1">               
+
+                <div id="header" class="height-400">
+
+                        <div class="image-wrapper image-background">
+                            <img src="./assets/logo-square.jpg" alt="">
+                            <div class="w-100 h-100" />
+                        </div>
+                </div>
+
+                <div class="padding-x-25">                
                     <slot/>
                 </div>
             </div>
+
         </div>
 
+
+        
     </div>
 </template>
 
@@ -19,7 +37,7 @@
 export default {
     name: 'Layout_BrioEventos',
     components:{
-        Navbar:()=>import('./components/Navbar'),
+        Sidebar:()=>import('./components/Sidebar'),
     },
     data(){
         return{

@@ -1,25 +1,34 @@
 <template>
-  <div id="sidebar" class="sidebar">
+  <div class="sidebar" :class="[ 'bg-grey-lighten-5' ]">
       <div class="sidebar-content">
 
-
-          <div class="sidebar-section padding-0">
-              
-                <div class="bg-blue w-100 vh-10 overflow-hidden  margin-bottom-50 padding-10 text-align-center d-flex flex-center" @pointerdown="toggleSidebar">
-                    <i class="uil uil-bars font-size-25 color-baby-powder"></i>
-                </div>
-                
-
+          <div class="sidebar-section">
+              <div class="image-wrapper height-50">
+                  <img src="../assets/logo-square.jpg" alt="">
+              </div>
+              <SidebarSearch class="margin-y-20"/>
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in site_routes" :key="index">
-                  <i :class="[iconClasses+route.icon, !sidebarState ? 'md:margin-right-0':'']"></i>
-                  <small :class="fontClasses">{{route.name}}</small>
+                  <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
+                  <span :class="fontClasses">{{route.name}}</span>
               </router-link>
           </div>
-          <div class="sidebar-section padding-x-0">
+
+          <div class="sidebar-section">
+              <div class="w-100 d-block">
+                  <label class="font-bolder font-size-8 color-grey-darken-1 text-uppercase">Extra</label>
+              </div>
               <router-link :to="'/'+route.name" :class="[routeClasses,actualRouteClasses(route)]" v-for="(route,index) in app_routes" :key="index">
-                  <i :class="[iconClasses+route.icon, !sidebarState ? 'md:margin-right-0':'']"></i>
-                  <small :class="fontClasses">{{route.name}}</small>
+                  <i :class="[iconClasses,'uil uil-'+route.icon]"></i>
+                  <span :class="fontClasses">{{route.name}}</span>
               </router-link>
+          </div>
+
+          <div class="sidebar-section padding-0">
+
+              <CurrentEventNotification />
+
+              <Avatar/>
+              
           </div>
 
       </div>
@@ -29,24 +38,28 @@
 <script>
 export default {
     name: 'Sidebar',
+    components:{
+        SidebarSearch:()=>import('../widgets/SidebarSearch'),
+        Avatar:()=>import('../widgets/Avatar'),
+        CurrentEventNotification:()=>import('../widgets/CurrentEventNotification'),
+    },
     data(){
         return{
             site_routes:[
                 {name:'dashboard',icon:'create-dashboard'},
                 {name:'agenda',icon:'schedule'},
                 {name:'exhibitors',icon:'podium'},
-                {name:'downloads',icon:'download-alt'},
-                {name:'survey',icon:'clipboard-alt'},
-                {name:'support',icon:'question-circle'},
                 {name:'games',icon:'streering'},
             ],
             app_routes:[
-                {name:'settings',icon:'setting'},
-                {name:'signout',icon:'signout'},
+                {name:'downloads',icon:'download-alt'},
+                {name:'favorites',icon:'heart'},
+                {name:'survey',icon:'clipboard-alt'},
+                {name:'support',icon:'question-circle'},
             ],
-            routeClasses:'w-100 padding-x-15 padding-y-5 sm:padding-y-10 md:d-flex align-items-center',
-            fontClasses: 'font-size-10 sm:font-size-20 text-uppercase tooltip margin-y-auto margin-x-0',
-            iconClasses: 'sm:font-size-18 tooltip-toggle d-none md:d-inline-block margin-right-10 uil uil-'
+            routeClasses:'w-100 padding-y-5 d-flex align-content-center  round-2',
+            fontClasses: 'font-size-8 font-bolder text-uppercase',
+            iconClasses: 'font-size-12 d-inline-block margin-right-10'
         }
     },
     methods:{
@@ -54,8 +67,7 @@ export default {
             let routerRoute = this.$route.path
             let vforRoute = '/'+route.name
             return {
-                'border-right-solid border-right-blue': routerRoute === vforRoute,
-                ' md:tooltip-wrapper': !this.sidebarState
+                'bg-blue-darken-4 padding-x-10 color-baby-powder depth-1-blue-darken-4': routerRoute === vforRoute,
             }
         },
     },
