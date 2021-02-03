@@ -5,7 +5,7 @@
       <div class="w-100 h-100 backdrop-blur-12 bg-black-fade-5 p-absolute top left padding-100"></div>
     </div>
     <div class="padding-x-10 padding-y-5 bg-white round-1 d-inline-flex">
-      <span class="font-size-8 font-bolder" v-if="this.featured">Partner Spotlight</span>
+      <span class="font-size-8 font-bolder" v-if="this.featured">Stand Patrocinado</span>
       <i :class="'font-size-10 uil uil-'+icon" v-if="!this.featured"></i>
     </div>
     <h6 class="margin-y-15 color-baby-powder">{{name}}</h6>
