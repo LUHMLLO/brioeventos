@@ -8,11 +8,11 @@
         
         <div id="content" class="d-flex depth-6">
 
-            <div class=" padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none" :class="!this.sidebarState ? 'col-6 z-index-12 depth-6':'sm:d-none col-2 md:col-3'">
+            <div class=" padding-0   overflow-hidden vh-100 overflow-scroll scrollbar-none" :class="this.sidebarState ? 'col-6 z-index-12 depth-6':'sm:d-none col-2 md:col-3'">
                 <Sidebar/>
             </div>
-            <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100 overflow-scroll scrollbar-none depth-1-grey-lighten-1">
-                <div class="p-absolute top left bg-black-fade-8 w-100 h-100 padding-100 z-index-12 cursor-pointer" @pointerdown="toggleSidebar" v-if="!this.sidebarState"/> 
+            <div class="col-10 md:col-9 sm:col-12 padding-0 bg-white  overflow-hidden vh-100  scrollbar-none depth-1-grey-lighten-1" :class="this.sidebarState ? '':'overflow-scroll'">
+                <div class="p-fixed top left bg-black-fade-8 vw-100 vh-100 padding-100 z-index-12 cursor-pointer" @pointerdown="toggleSidebar" v-if="this.sidebarState"/> 
                 <Navbar class="d-none sm:d-flex"/>
                 <div class="padding-x-25">
                     <slot/>

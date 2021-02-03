@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="offset-right-25 offset-left-25 margin-bottom-15">
+    <div class="offset-right-25 offset-left-25 margin-bottom-15 depth-1">
       <div class="bg-black height-500 video-wrapper w-100 h-100">
         <video src="@/assets/demoStream.webm" autoplay muted></video>
       </div>
