@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="" class="w-50 h-50 md:w-25" v-for="(Dbutton, index) in dashboard_buttons" :key="index"  :class="theme.col_padding">
+    <router-link to="" class="w-50 h-50 md:w-25 md:h-100" v-for="(Dbutton, index) in dashboard_buttons" :key="index"  :class="theme.col_padding">
       <div class="bg-blue h-100 w-100 p-relative overflow-hidden" :class="[theme.radius]">
         <div class="image-wrapper image-background image-overlay-4 image-blur-2">
           <img :src="Dbutton.bg" alt="" />

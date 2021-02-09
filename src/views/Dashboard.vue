@@ -2,20 +2,20 @@
   <BrioLayout>
     <div id="dashboard">
       <!------------------------------------------------->
-      <section class="d-flex offset-x-5 offset-t-5 flex-wrap">
+      <section class="d-flex offset-x-5 offset-t-5 flex-wrap pb-5">
         <div class="flex-grow-1 flex-shrink-0 w-65 md:w-100" :class="theme.col_padding">
           <div class="w-100 s:h-300 bg-blue overflow-hidden" :class="[theme.radius]">
             <VideoPlayer />
           </div>
         </div>
 
-        <div class="flex-grow-0 flex-shrink-0 w-35 md:w-100 md:s:h-300">
+        <div class="flex-grow-0 flex-shrink-0 w-35 md:w-100 md:s:h-150 sm:s:h-125">
           <DashboardButtons class="d-flex flex-wrap w-100 h-100" />
         </div>
       </section>
       <!------------------------------------------------->
       <section class="d-flex flex-wrap">
-        <div class="w-50 p-15" :class="[theme.radius,theme.secondary_background]">
+        <div class="w-50 p-15 md:w-100" :class="[theme.radius,theme.secondary_background]">
           <h6 class="font-sm mt-0 mb-15">Eventos Proximos</h6>
           
           <div class="d-flex content-start justify-start mb-20" v-for="(dummy,index) in 10" :key="index">
