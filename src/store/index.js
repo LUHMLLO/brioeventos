@@ -1,19 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import sidebar from './modules/sidebar'
-import videoplayer from './modules/videoplayer'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-    sidebar,
-    videoplayer
-  }
-})
+  state: {},
+  mutations: {},
+  actions: {},
+  modules: {}
+});

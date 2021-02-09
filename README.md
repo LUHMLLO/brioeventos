@@ -1,4 +1,4 @@
-# brioeventos
+# brioplatform
 
 ## Project setup
 ```

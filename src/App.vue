@@ -1,18 +1,5 @@
 <template>
-  <div id="app">    
-    <component :is="this.layout">
-      <router-view/>
-    </component>
+  <div id="app" class="overflow-hidden vh:h-1000">
+    <router-view />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'app',
-  data(){
-    return{
-      layout: 'Layout_BrioEventos'
-    }
-  },
-}
-</script>
