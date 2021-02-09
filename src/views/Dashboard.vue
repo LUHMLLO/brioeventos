@@ -4,12 +4,12 @@
       <!------------------------------------------------->
       <section class="d-flex offset-x-5 offset-t-5 flex-wrap pb-5">
         <div class="flex-grow-1 flex-shrink-0 w-65 md:w-100" :class="theme.col_padding">
-          <div class="w-100 s:h-300 bg-blue overflow-hidden" :class="[theme.radius]">
+          <div class="w-100 s:h-300 bg-grey-darken-4 overflow-hidden" :class="[theme.radius]">
             <VideoPlayer />
           </div>
         </div>
 
-        <div class="flex-grow-0 flex-shrink-0 w-35 md:w-100 md:s:h-150 sm:s:h-125">
+        <div class="flex-grow-0 flex-shrink-0 w-35 md:w-100 md:s:h-150 sm:h-100 debug">
           <DashboardButtons class="d-flex flex-wrap w-100 h-100" />
         </div>
       </section>
