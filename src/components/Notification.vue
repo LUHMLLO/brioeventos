@@ -1,5 +1,5 @@
 <template>
-  <div class="p-16 d-flex width-300 flex-shrink-1 content-center p-fixed bottom right z-index-11 md:d-none transition" :class="[notificationStatus ? 'opacity-100' : 'opacity-0 hidden']">
+  <div class="p-16 d-flex width-300 flex-shrink-1 content-center p-fixed bottom right z-index-11 transition" :class="[notificationStatus ? 'opacity-100' : 'opacity-0 hidden']">
     <div class="w-100 h-100 p-16 depth-6" :class="[theme.radius, theme.accent_background, theme.secondary_color]">
       <label class="font-xs pb-5 border-b border-grey-ligthen-2 w-100 d-block">Evento actual</label>
       <div class="d-flex w-100 content-center m-y-5">
