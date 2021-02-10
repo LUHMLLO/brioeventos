@@ -34,13 +34,14 @@
       </div>
       <div class="sidebar-section">
         <!-------------------------------------->
-        <div class="p-16 d-flex flex-column justify-start w-100">
-          <!-------------------------------------->
-          <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in app_routes" :key="index - 100">
-            <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
-            <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
-          </router-link>
-          <!-------------------------------------->
+        <div class="p-16 d-flex w-100 content-center" :class="[theme.accent_background, theme.secondary_color]">
+          <div class="avatar overflow-hidden m-y-auto ml-0 mr-5" :class="[theme.radius]">
+            <img src="@/assets/printo.png" alt="" />
+          </div>
+          <div class="d-flex w-100 content-center justify-between">
+            <h6 class="m-y-auto ml-0 font-xs">username</h6>
+            <i class="uil uil-setting m-y-auto mr-0 font-sm" />
+          </div>
         </div>
         <!-------------------------------------->
       </div>
@@ -73,7 +74,7 @@ export default {
     };
   },
   methods: {
-    activeRoute: function (route) {
+    activeRoute: function(route) {
       let routerRoute = this.$route.path;
       let vRoute = "/" + route.name;
       if (routerRoute === vRoute) {

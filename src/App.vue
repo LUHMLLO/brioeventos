@@ -3,15 +3,17 @@
     <BrioLayout>
       <router-view />
     </BrioLayout>
+
+    <Notification />
   </div>
 </template>
-
 
 <script>
 export default {
   name: "Home",
   components: {
-    BrioLayout: () => import("@/layouts/BrioLayout")
+    BrioLayout: () => import("@/layouts/BrioLayout"),
+    Notification: () => import("@/components/Notification")
   }
 };
 </script>
