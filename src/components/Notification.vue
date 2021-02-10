@@ -9,7 +9,7 @@
         <h6 class="font-md m-y-auto ml-0">{{ notificationOwner }}</h6>
       </div>
       <small class="font-sm d-block">{{ notificationText }}</small>
-      <a href="#" class="font-sm d-inline-block mt-5 pb-2 border-b border-grey-ligthen-2">{{ notificationButtonText }}</a>
+      <a class="font-sm d-inline-block mt-5 pb-2 border-b border-grey-ligthen-2" @click.stop="refreshApp">{{ notificationButtonText }}</a>
     </div>
   </div>
 </template>
