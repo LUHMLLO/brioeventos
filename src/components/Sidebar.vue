@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar overflow-visible">
+  <div class="sidebar overflow-visible w-100">
     <div class="sidebar-content">
       <!-------------------------------------->
       <div class="sidebar-section">
@@ -10,23 +10,23 @@
           </div>
         </div>
         <!-------------------------------------->
-        <div class="p-16 d-flex flex-column justify-start">
+        <div class="p-16 w-100 d-flex flex-column justify-start">
           <!-------------------------------------->
           <div class="input-wrapper p-x-10 p-y-5 bg-grey-lighten-2 color-grey m-y-16" :class="[theme.radius]">
-            <i class="uil uil-search font-xs" />
-            <input class="font-sm" type="text" placeholder="Buscar..." />
+            <i class="uil uil-search font-xs xs:font-base" />
+            <input class="font-sm xs:font-base" type="text" placeholder="Buscar..." />
           </div>
           <!-------------------------------------->
-          <h6 class="font-xs color-grey mb-5">Main</h6>
+          <h6 class="font-xs xs:font-base color-grey mb-5 xs:mb-10">Main</h6>
           <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in main_routes" :key="index">
-            <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
-            <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
+            <i class="font-sm xs:font-xl m-y-auto mr-5 xs:mr-10 ml-0" :class="[route.icon]" />
+            <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
           </router-link>
           <!-------------------------------------->
-          <h6 class="font-xs color-grey mb-5">Extras</h6>
+          <h6 class="font-xs xs:font-base color-grey mb-5 xs:mb-10">Extras</h6>
           <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in extra_routes" :key="index + 100">
-            <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
-            <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
+            <i class="font-sm xs:font-xl m-y-auto mr-5 xs:mr-10 ml-0" :class="[route.icon]" />
+            <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
           </router-link>
           <!-------------------------------------->
         </div>

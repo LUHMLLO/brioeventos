@@ -1,17 +1,18 @@
 import Vue from "vue";
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 Vue.mixin({
   computed: {
     ...mapGetters({
-      notificationStatus: "notificationStatus"
-    }),
-    ...mapActions({
-      launch_notification: "launch_notification"
+      notificationStatus: "notificationStatus",
+      sidebarStatus: "sidebarStatus"
     })
   },
   methods: {
     toggleNotification: function() {
       this.$store.dispatch("launch_notification");
+    },
+    toggleSidebar: function() {
+      this.$store.dispatch("toggle_sidebar");
     }
   }
 });
