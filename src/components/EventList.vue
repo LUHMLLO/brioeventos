@@ -1,7 +1,7 @@
 <template>
   <div class="p-16" :class="[theme.radius, theme.secondary_background]">
-    <h6 class="font-sm mt-0 mb-15">Eventos Proximos</h6>
-    <div class="height-400 overflow-hidden overflow-y-scroll scrollbar-none">
+    <h6 class="font-xs color-grey mt-0 mb-15">Eventos Proximos</h6>
+    <div class="height-100 sm:height-180 overflow-hidden overflow-y-scroll scrollbar-none">
       <div class="d-flex content-start justify-start mb-20" v-for="(dummy, index) in 10" :key="index">
         <div class="flex-grow-0 flex-shrink-0">
           <div class="avatar overflow-hidden mt-3" :class="[theme.radius]">

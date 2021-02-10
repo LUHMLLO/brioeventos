@@ -5,7 +5,7 @@ const getters = {
   notificationStatus: state => state.notification
 };
 const mutations = {
-  notification_mutation(state) {    
+  notification_mutation(state) {
     state.notification = !state.notification;
     setTimeout(() => {
       state.notification = !state.notification;

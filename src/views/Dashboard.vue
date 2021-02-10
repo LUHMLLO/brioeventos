@@ -2,27 +2,14 @@
   <div id="dashboard">
     <!------------------------------------------------->
     <section class="row offset-x-16">
-      <div class="col-8 md:col-12 md:pb-0">
-        <VideoPlayer class="overflow-hidden" :class="[theme.radius]" />
+      <div class="col-9 md:col-12 md:pb-0">
+        <VideoPlayer class="overflow-hidden mb-16" :class="[theme.radius]" />
+        <EventList class="m-y-16" />
       </div>
-
-      <div class="col-4 md:col-12 p-0">
+      <div class="col-3 md:col-12 p-0">
         <DashboardButtons />
       </div>
     </section>
-    <!------------------------------------------------->
-    <section class="row offset-x-16">
-      <div class="col-4 sm:col-12">
-        <EventList />
-      </div>
-      <div class="col-4 sm:col-12">
-        <EventList />
-      </div>
-      <div class="col-4 sm:col-12">
-        <EventList />
-      </div>
-    </section>
-    <!------------------------------------------------->
   </div>
 </template>
 
@@ -36,3 +23,18 @@ export default {
   }
 };
 </script>
+
+/*
+<!------------------------------------------------->
+<section class="row offset-x-16">
+  <div class="col-4 sm:col-12">
+  </div>
+  <div class="col-4 sm:col-12">
+    <EventList />
+  </div>
+  <div class="col-4 sm:col-12">
+    <EventList />
+  </div>
+</section>
+<!------------------------------------------------->
+*/
