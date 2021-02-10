@@ -1,12 +1,12 @@
 <template>
   <div class="row">
-    <div class="col-6 pb-0" v-for="(Dbutton, index) in dashboard_buttons" :key="index">
+    <div class="col-6 md:col-3 sm:col-12 pb-0" v-for="(Dbutton, index) in dashboard_buttons" :key="index">
       <router-link to="">
         <div class="height-150 w-100 p-relative overflow-hidden" :class="[theme.radius]">
           <div class="image-wrapper image-background image-overlay-4 image-blur-2">
             <img :src="Dbutton.bg" alt="" />
           </div>
-          <div class="w-100 h-100 p-10 p-absolute d-flex flex-column justify-center">
+          <div class="w-100 h-100 p-10 p-absolute d-flex flex-column justify-between">
             <div class="mt-0 w-100">
               <span :class="[theme.radius, theme.chip, theme.secondary_background]" v-if="Dbutton.icon">
                 <i :class="Dbutton.icon"></i>

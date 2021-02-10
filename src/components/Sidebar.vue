@@ -12,12 +12,19 @@
         <!-------------------------------------->
         <div class="p-16 d-flex flex-column justify-start">
           <!-------------------------------------->
-          <div class="input-wrapper p-x-10 p-y-5 bg-grey-lighten-2 color-grey mb-16" :class="[theme.radius]">
+          <div class="input-wrapper p-x-10 p-y-5 bg-grey-lighten-2 color-grey m-y-16" :class="[theme.radius]">
             <i class="uil uil-search font-xs" />
             <input class="font-sm" type="text" placeholder="Buscar..." />
           </div>
           <!-------------------------------------->
-          <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in site_routes" :key="index">
+          <h6 class="font-xs color-grey mb-5">Main</h6>
+          <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in main_routes" :key="index">
+            <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
+            <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
+          </router-link>
+          <!-------------------------------------->
+          <h6 class="font-xs color-grey mb-5">Extras</h6>
+          <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in extra_routes" :key="index + 100">
             <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
             <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
           </router-link>
@@ -27,6 +34,14 @@
       </div>
       <div class="sidebar-section">
         <!-------------------------------------->
+        <div class="p-16 d-flex flex-column justify-start w-100">
+          <!-------------------------------------->
+          <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in app_routes" :key="index - 100">
+            <i class="font-sm m-y-auto mr-5 ml-0" :class="[route.icon]" />
+            <span class="font-xs font-bold m-y-auto ml-0 uppercase" v-html="route.name" />
+          </router-link>
+          <!-------------------------------------->
+        </div>
         <!-------------------------------------->
       </div>
       <!-------------------------------------->
@@ -39,29 +54,31 @@ export default {
   name: "Sidebar",
   data() {
     return {
-      site_routes: [
+      main_routes: [
         { name: "dashboard", icon: "uil uil-create-dashboard" },
         { name: "agenda", icon: "uil uil-schedule" },
         { name: "exhibitors", icon: "uil uil-podium" },
-        { name: "downloads", icon: "uil uil-download-alt" },
-        { name: "survey", icon: "uil uil-clipboard-alt" },
-        { name: "support", icon: "uil uil-question-circle" },
         { name: "games", icon: "uil uil-streering" }
+      ],
+      extra_routes: [
+        { name: "downloads", icon: "uil uil-download-alt" },
+        { name: "favorites", icon: "uil uil-heart" },
+        { name: "survey", icon: "uil uil-clipboard-alt" },
+        { name: "support", icon: "uil uil-question-circle" }
       ],
       app_routes: [
         { name: "settings", icon: "uil uil-setting" },
         { name: "signout", icon: "uil uil-signout" }
-      ],
+      ]
     };
   },
   methods: {
     activeRoute: function (route) {
       let routerRoute = this.$route.path;
       let vRoute = "/" + route.name;
-      if(routerRoute === vRoute){
-        return `p-x-10 ${this.theme.secondary_color} ${this.theme.accent_background}`
+      if (routerRoute === vRoute) {
+        return `p-x-10 ${this.theme.secondary_color} ${this.theme.accent_background}`;
       }
-      
     }
   }
 };
