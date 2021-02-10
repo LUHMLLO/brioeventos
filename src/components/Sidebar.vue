@@ -53,14 +53,14 @@ export default {
       main_routes: [
         { name: "dashboard", icon: "uil uil-create-dashboard" },
         { name: "agenda", icon: "uil uil-schedule" },
-        { name: "exhibitors", icon: "uil uil-podium" },
-        { name: "games", icon: "uil uil-streering" }
+        { name: "expositores", icon: "uil uil-podium" },
+        { name: "juegos", icon: "uil uil-streering" }
       ],
       extra_routes: [
-        { name: "downloads", icon: "uil uil-download-alt" },
-        { name: "favorites", icon: "uil uil-heart" },
-        { name: "survey", icon: "uil uil-clipboard-alt" },
-        { name: "support", icon: "uil uil-question-circle" }
+        { name: "descargas", icon: "uil uil-download-alt" },
+        { name: "favoritos", icon: "uil uil-heart" },
+        { name: "encuesta", icon: "uil uil-clipboard-alt" },
+        { name: "soporte", icon: "uil uil-question-circle" }
       ]
     };
   },
