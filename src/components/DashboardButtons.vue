@@ -6,7 +6,6 @@
           <div class="image-wrapper image-background image-overlay-4 image-blur-2">
             <img :src="Dbutton.bg" alt="" />
           </div>
-
           <div class="w-100 h-100 p-10 p-absolute d-flex flex-column justify-center">
             <div class="mt-0 w-100">
               <span :class="[theme.radius, theme.chip, theme.secondary_background]" v-if="Dbutton.icon">

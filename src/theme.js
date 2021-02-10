@@ -10,6 +10,8 @@ Vue.mixin({
         secondary_color: "color-baby-powder",
         secondary_background: "bg-grey-lighten-3",
 
+        accent_background: "bg-blue-darken-4",
+
         radius: "round-1",
         chip: "bg-grey-lighten-2 font-xs p-5 d-inline-block"
       }
