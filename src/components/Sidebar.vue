@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar overflow-visible">
     <div class="sidebar-content">
       <!-------------------------------------->
       <div class="sidebar-section">
@@ -32,17 +32,9 @@
         </div>
         <!-------------------------------------->
       </div>
-      <div class="sidebar-section">
+      <div class="sidebar-section overflow-visible">
         <!-------------------------------------->
-        <div class="p-16 d-flex w-100 content-center" :class="[theme.accent_background, theme.secondary_color]">
-          <div class="avatar overflow-hidden m-y-auto ml-0 mr-5" :class="[theme.radius]">
-            <img src="@/assets/printo.png" alt="" />
-          </div>
-          <div class="d-flex w-100 content-center justify-between">
-            <h6 class="m-y-auto ml-0 font-xs">username</h6>
-            <i class="uil uil-setting m-y-auto mr-0 font-sm" />
-          </div>
-        </div>
+        <SidebarAvatar />
         <!-------------------------------------->
       </div>
       <!-------------------------------------->
@@ -53,6 +45,9 @@
 <script>
 export default {
   name: "Sidebar",
+  components: {
+    SidebarAvatar: () => import("@/components/Sidebar_Avatar")
+  },
   data() {
     return {
       main_routes: [
@@ -66,10 +61,6 @@ export default {
         { name: "favorites", icon: "uil uil-heart" },
         { name: "survey", icon: "uil uil-clipboard-alt" },
         { name: "support", icon: "uil uil-question-circle" }
-      ],
-      app_routes: [
-        { name: "settings", icon: "uil uil-setting" },
-        { name: "signout", icon: "uil uil-signout" }
       ]
     };
   },

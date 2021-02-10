@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="pl-10">
-          <h6 class="font-sm m-0">Ea repellat neque impedit beatae sequi nemo blanditiis officia modi.</h6>
+          <h6 class="font-xs m-0">Ea repellat neque impedit beatae sequi nemo blanditiis officia modi.</h6>
           <p class="font-xs m-y-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit unde cumque ea nulla temporibus quis cupiditate minima error dolores repudiandae.</p>
           <span :class="[theme.radius, theme.chip]"> 10:10am </span>
         </div>
