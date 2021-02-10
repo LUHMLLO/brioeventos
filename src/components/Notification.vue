@@ -8,8 +8,8 @@
         </div>
         <h6 class="font-sm m-y-auto ml-0">Blue Moon</h6>
       </div>
-      <small class="font-xs d-block">molestiae excepturi incidunt, repudiandae iste, placeat asperiores nulla quia cum!</small>
-      <a href="#" class="font-xs d-inline-block mt-5 pb-2 border-b border-grey-ligthen-2">Visítanos</a>
+      <small class="font-xs d-block">{{ notificationText }}</small>
+      <a href="#" class="font-xs d-inline-block mt-5 pb-2 border-b border-grey-ligthen-2">{{ notificationButtonText }}</a>
     </div>
   </div>
 </template>
@@ -20,17 +20,16 @@ export default {
     return {
       refreshing: false,
       registration: null,
-      snackBtnText: '',
-      snackWithBtnText: '',
-      snackWithButtons: false,
+      notificationText: "im a notification",
+      notificationButtonText: "Visítanos"
     };
   },
   created() {
     // Listen for swUpdated event and display refresh snackbar as required.
-    document.addEventListener('swUpdated', this.showRefreshUI, { once: true });
+    document.addEventListener("swUpdated", this.showRefreshUI, { once: true });
     // Refresh all open app tabs when a new service worker is installed.
     if (navigator.serviceWorker) {
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
         if (this.refreshing) return;
         this.refreshing = true;
         window.location.reload();
@@ -39,23 +38,19 @@ export default {
   },
   methods: {
     showRefreshUI(e) {
-      // Display a snackbar inviting the user to refresh/reload the app due
-      // to an app update being available.
-      // The new service worker is installed, but not yet active.
-      // Store the ServiceWorkerRegistration instance for later use.
       this.registration = e.detail;
-      console.log(this.registration);
-      this.snackBtnText = 'Refresh';
-      this.snackWithBtnText = 'New version available!';
-      this.snackWithButtons = true;
+      this.toggleNotification();
+      this.notificationText = "New version available!";
+      this.notificationButtonText = "update now";
     },
     refreshApp() {
-      this.snackWithButtons = false;
       // Protect against missing registration.waiting.
-      if (!this.registration || !this.registration.waiting) { return; }
-      this.registration.waiting.postMessage('skipWaiting');
-    },
-  },
+      if (!this.registration || !this.registration.waiting) {
+        return;
+      }
+      this.registration.waiting.postMessage("skipWaiting");
+    }
+  }
 };
 </script>
 

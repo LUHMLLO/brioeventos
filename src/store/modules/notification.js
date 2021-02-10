@@ -7,12 +7,9 @@ const getters = {
 const mutations = {
   notification_mutation(state) {
     state.notification = !state.notification;
-    console.log("launching notification");
-
     setTimeout(() => {
       state.notification = !state.notification;
-      console.log("closing notification");
-    }, 2500);
+    }, 10000);
   }
 };
 const actions = {
