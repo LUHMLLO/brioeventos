@@ -1,5 +1,5 @@
 <template>
-<div id="Plyr_Video_Player" class="w-100 h-100">
+<div id="Plyr_Video_Player" class="w-100 height-316">
   <iframe
     :src="videoSRC"
     allowfullscreen

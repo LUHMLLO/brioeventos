@@ -2,76 +2,25 @@
   <BrioLayout>
     <div id="dashboard">
       <!------------------------------------------------->
-      <section class="row">
-        <div class="col-8" :class="theme.col_padding">
+      <section class="row offset-x-16 offset-t-16">
+        <div class="col-8 sm:col-12">
             <VideoPlayer class="overflow-hidden" :class="[theme.radius]"/>
         </div>
 
-        <div class="col-4 p-0">
+        <div class="col-4 sm:col-12 p-0">
           <DashboardButtons/>
         </div>
       </section>
       <!------------------------------------------------->
-      <section class="row">
-        <div class="col-4 p-5">
-          <div class="s:h-400 overflow-hidden overflow-y-scroll scrollbar-none p-15" :class="[theme.radius,theme.secondary_background]">
-            <h6 class="font-sm mt-0 mb-15">Eventos Proximos</h6>
-            
-            <div class="d-flex content-start justify-start mb-20" v-for="(dummy,index) in 10" :key="index">
-              <div class="flex-grow-0 flex-shrink-0">  
-                <div class="avatar overflow-hidden mt-3" :class="[theme.radius]">
-                  <img src="@/assets/printo.png" alt="">
-                </div>
-              </div>
-              <div class="pl-10">
-                <h6 class="font-sm m-0">Ea repellat neque impedit beatae sequi nemo blanditiis officia modi.</h6>
-                <p class="font-xs m-y-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit unde cumque ea nulla temporibus quis cupiditate minima error dolores repudiandae. </p>
-                <span :class="[theme.radius,theme.chip]">
-                  10:10am
-                </span>
-              </div>
-            </div>
-          </div>
+      <section class="row offset-x-16">
+        <div class="col-4 sm:col-12">
+          <EventList/>
         </div>
-        <div class="col-4 p-5">
-          <div class="s:h-400 overflow-hidden overflow-y-scroll scrollbar-none p-15" :class="[theme.radius,theme.secondary_background]">
-            <h6 class="font-sm mt-0 mb-15">Eventos Proximos</h6>
-            
-            <div class="d-flex content-start justify-start mb-20" v-for="(dummy,index) in 10" :key="index">
-              <div class="flex-grow-0 flex-shrink-0">  
-                <div class="avatar overflow-hidden mt-3" :class="[theme.radius]">
-                  <img src="@/assets/printo.png" alt="">
-                </div>
-              </div>
-              <div class="pl-10">
-                <h6 class="font-sm m-0">Ea repellat neque impedit beatae sequi nemo blanditiis officia modi.</h6>
-                <p class="font-xs m-y-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit unde cumque ea nulla temporibus quis cupiditate minima error dolores repudiandae. </p>
-                <span :class="[theme.radius,theme.chip]">
-                  10:10am
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="col-4 sm:col-12">
+          <EventList/>
         </div>
-        <div class="col-4 p-5">
-          <div class="s:h-400 overflow-hidden overflow-y-scroll scrollbar-none p-15" :class="[theme.radius,theme.secondary_background]">
-            <h6 class="font-sm mt-0 mb-15">Eventos Proximos</h6>
-            
-            <div class="d-flex content-start justify-start mb-20" v-for="(dummy,index) in 10" :key="index">
-              <div class="flex-grow-0 flex-shrink-0">  
-                <div class="avatar overflow-hidden mt-3" :class="[theme.radius]">
-                  <img src="@/assets/printo.png" alt="">
-                </div>
-              </div>
-              <div class="pl-10">
-                <h6 class="font-sm m-0">Ea repellat neque impedit beatae sequi nemo blanditiis officia modi.</h6>
-                <p class="font-xs m-y-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit unde cumque ea nulla temporibus quis cupiditate minima error dolores repudiandae. </p>
-                <span :class="[theme.radius,theme.chip]">
-                  10:10am
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="col-4 sm:col-12">
+          <EventList/>
         </div>
       </section>
       <!------------------------------------------------->
@@ -85,7 +34,8 @@ export default {
   components: {
     BrioLayout: () => import("@/layouts/BrioLayout"),
     VideoPlayer: () => import("@/components/VideoPlayer"),
-    DashboardButtons: () => import("@/components/DashboardButtons")
+    DashboardButtons: () => import("@/components/DashboardButtons"),
+    EventList: () => import("@/components/EventList")
   }
 };
 </script>

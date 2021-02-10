@@ -13,7 +13,7 @@
             <Header/>
           </div>
           <div id="content">
-            <div class="p-20">
+            <div class="p-16">
               <slot />
             </div>
           </div>

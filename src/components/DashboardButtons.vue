@@ -1,31 +1,31 @@
 <template>
-  <div class="row h-100">
-    <router-link to="" class="col-6" v-for="(Dbutton, index) in dashboard_buttons" :key="index"  :class="theme.col_padding">
-      <div class="s:h-150 w-100 p-relative overflow-hidden" :class="[theme.radius]">
-        
-        <div class="image-wrapper image-background image-overlay-4 image-blur-2">
-          <img :src="Dbutton.bg" alt="" />
-        </div>
+  <div class="row">
+    <div class="col-6 pb-0" v-for="(Dbutton, index) in dashboard_buttons" :key="index">
+      <router-link to="">
+        <div class="height-150 w-100 p-relative overflow-hidden" :class="[theme.radius]">
+          <div class="image-wrapper image-background image-overlay-4 image-blur-2">
+            <img :src="Dbutton.bg" alt="" />
+          </div>
 
-        <div class="w-100 h-100 p-10 p-absolute d-flex flex-column justify-center">
-          <div class="mt-0 w-100">
-            <span :class="[theme.radius,theme.chip,theme.secondary_background]" v-if="Dbutton.icon">
-              <i :class="Dbutton.icon"></i>
-            </span>
-            <span :class="[theme.radius,theme.chip,theme.secondary_background]" v-if="!Dbutton.icon" v-html="Dbutton.featured" />
-          </div>
-          <div class="m-y-auto w-100 sm:s:h-20 sm:m-y-10">
-            <p class="font-sm uppercase font-bold m-0" :class="[theme.secondary_color]" v-html="Dbutton.name" />
-          </div>
-          <div class="mb-0 w-100">
-            <span :class="[theme.radius,theme.chip,theme.secondary_background]">
-              <i class="uil uil-arrow-right"></i>
-            </span>
+          <div class="w-100 h-100 p-10 p-absolute d-flex flex-column justify-center">
+            <div class="mt-0 w-100">
+              <span :class="[theme.radius, theme.chip, theme.secondary_background]" v-if="Dbutton.icon">
+                <i :class="Dbutton.icon"></i>
+              </span>
+              <span :class="[theme.radius, theme.chip, theme.secondary_background]" v-if="!Dbutton.icon" v-html="Dbutton.featured" />
+            </div>
+            <div class="m-y-auto w-100 sm:height-20 sm:m-y-10">
+              <p class="font-sm uppercase font-bold m-0" :class="[theme.secondary_color]" v-html="Dbutton.name" />
+            </div>
+            <div class="mb-0 w-100">
+              <span :class="[theme.radius, theme.chip, theme.secondary_background]">
+                <i class="uil uil-arrow-right"></i>
+              </span>
+            </div>
           </div>
         </div>
-        
-      </div>
-    </router-link>
+      </router-link>
+    </div>
   </div>
 </template>
 

@@ -11,8 +11,7 @@ Vue.mixin({
         secondary_background: "bg-grey-lighten-3",
 
         radius: "round-1",
-        chip: "bg-grey-lighten-2 font-xs p-5 d-inline-block",
-        col_padding: "p-5"
+        chip: "bg-grey-lighten-2 font-xs p-5 d-inline-block"
       }
     };
   }
