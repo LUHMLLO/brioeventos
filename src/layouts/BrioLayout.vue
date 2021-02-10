@@ -34,7 +34,7 @@ export default {
     Header: () => import("@/components/Header")
   },
   computed: {
-    checkSidebarStatus: function () {
+    checkSidebarStatus: function() {
       return {
         "w-75 vh:h-1000 p-fixed top left z-index-11 depth-6": this.sidebarStatus,
         "col-2 p-relative sm:d-none": !this.sidebarStatus
