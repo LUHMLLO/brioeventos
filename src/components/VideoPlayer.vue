@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 56.25% 0 0 0; position: relative">
+  <div class="overflow-hidden" style="padding: 56.25% 0 0 0; position: relative">
     <iframe   
     :src="videoSRC"   
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"  
@@ -16,7 +16,7 @@ export default {
   props: {
     videoSRC: {
       type: String,
-      default: "https://player.vimeo.com/video/143418951?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0"
+      default: "https://player.vimeo.com/video/143418951?autoplay=1&loop=1&color=ffffff&title=1&byline=0&portrait=0"
     }
   },
   mounted(){    
