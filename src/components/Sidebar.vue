@@ -23,7 +23,6 @@
             <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
           </router-link>
           <!-------------------------------------->
-          <h6 class="font-xs xs:font-base color-grey mb-5 xs:mb-10">Extras</h6>
           <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in extra_routes" :key="index + 100">
             <i class="font-sm xs:font-xl m-y-auto mr-5 xs:mr-10 ml-0" :class="[route.icon]" />
             <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
@@ -53,8 +52,7 @@ export default {
       main_routes: [
         { name: "dashboard", icon: "uil uil-create-dashboard" },
         { name: "agenda", icon: "uil uil-schedule" },
-        { name: "expositores", icon: "uil uil-podium" },
-        { name: "juegos", icon: "uil uil-streering" }
+        { name: "expositores", icon: "uil uil-podium" }
       ],
       extra_routes: [
         { name: "descargas", icon: "uil uil-download-alt" },
