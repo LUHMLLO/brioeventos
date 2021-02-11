@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12 md:col-3 xs:col-6 pb-0" v-for="(Dbutton, index) in dashboard_buttons" :key="index">
-      <router-link to="">
+      <router-link :to="Dbutton.url">
         <div class="height-100 w-100 p-relative overflow-hidden" :class="[theme.radius]">
           <div class="image-wrapper image-background image-overlay-4 image-blur-2">
             <img :src="Dbutton.bg" alt="" />
@@ -37,22 +37,26 @@ export default {
           featured: "Visítanos",
           name: null,
           icon: null,
-          bg: require("@/assets/printo.png")
+          bg: require("@/assets/printo.png"),
+          url: "https://exhibicion-expocibao.webflow.io/3g-stand-m/printo"
         },
         {
           name: "sala de exposición",
           icon: "uil uil-presentation-plus",
-          bg: "https://images.unsplash.com/photo-1518998053901-5348d3961a04"
+          bg: "https://images.unsplash.com/photo-1518998053901-5348d3961a04",
+          url: "https://exhibicion-expocibao.webflow.io/exhibicion-1"
         },
         {
           name: "sesiones",
           icon: "uil uil-users-alt",
-          bg: "https://images.unsplash.com/photo-1591616369924-833532b76ebc"
+          bg: "https://images.unsplash.com/photo-1591616369924-833532b76ebc",
+          url: ""
         },
         {
           name: "mensajes",
           icon: "uil uil-comments-alt",
-          bg: "https://images.unsplash.com/photo-1611746869696-d09bce200020"
+          bg: "https://images.unsplash.com/photo-1611746869696-d09bce200020",
+          url: ""
         }
       ]
     };
