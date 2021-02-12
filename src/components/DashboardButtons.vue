@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12 md:col-3 xs:col-6 pb-0" v-for="(Dbutton, index) in dashboard_buttons" :key="index">
-      <router-link :to="Dbutton.url">
+      <a :href="Dbutton.url">
         <div class="height-100 w-100 p-relative overflow-hidden" :class="[theme.radius]">
           <div class="image-wrapper image-background image-overlay-4 image-blur-2">
             <img :src="Dbutton.bg" alt="" />
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>

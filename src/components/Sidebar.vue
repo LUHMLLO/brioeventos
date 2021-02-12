@@ -17,15 +17,15 @@
             <input class="font-sm xs:font-base" type="text" placeholder="Buscar..." />
           </div>
           <!-------------------------------------->
-          <h6 class="font-xs xs:font-base color-grey mb-5 xs:mb-10">Main</h6>
+          <h6 class="font-xs xs:font-base color-grey mb-5 xs:mb-10 uppercase">Main</h6>
           <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in main_routes" :key="index">
             <i class="font-sm xs:font-xl m-y-auto mr-5 xs:mr-10 ml-0" :class="[route.icon]" />
-            <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
+            <span class="font-sm xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
           </router-link>
           <!-------------------------------------->
           <router-link :to="route.name" class="d-inline-flex content-center p-y-8" :class="[theme.radius, activeRoute(route)]" v-for="(route, index) in extra_routes" :key="index + 100">
             <i class="font-sm xs:font-xl m-y-auto mr-5 xs:mr-10 ml-0" :class="[route.icon]" />
-            <span class="font-xs xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
+            <span class="font-sm xs:font-base font-bold m-y-auto ml-0 xs:mt-6 uppercase" v-html="route.name" />
           </router-link>
           <!-------------------------------------->
         </div>
