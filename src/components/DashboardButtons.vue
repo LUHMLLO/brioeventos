@@ -38,7 +38,7 @@ export default {
           name: null,
           icon: null,
           bg: require("@/assets/printo.png"),
-          url: "https://exhibicion-expocibao.webflow.io/3g-stand-m/printo"
+          url: "https://exhibicion-expocibao.webflow.io/3g-stand-s/brio-eventos"
         },
         {
           name: "sala de exposición",
@@ -56,7 +56,7 @@ export default {
           name: "mensajes",
           icon: "uil uil-comments-alt",
           bg: "https://images.unsplash.com/photo-1611746869696-d09bce200020",
-          url: ""
+          url: "https://networking.expocibao.com/login/"
         }
       ]
     };
